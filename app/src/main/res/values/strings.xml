@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">Team 5 App</string>
+    <string name="team5members">
+        Murali
+    \nNaren
+    \nSiva
+    \nPaul
+    \nRamya
+    \nLavanya
+    \nPriya
+    \nYoga
+    </string>
+    <string name="lab_objective"> Handle concurrency with Threads, AsyncTask and Handlers. Access and Process data over network</string>
+</resources>
