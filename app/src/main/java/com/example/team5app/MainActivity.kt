@@ -6,18 +6,25 @@ import android.os.Bundle
 import android.util.Log
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
+import androidx.activity.viewModels
 import androidx.annotation.RequiresApi
 import androidx.compose.foundation.layout.*
+import androidx.compose.foundation.lazy.LazyColumn
+import androidx.compose.foundation.lazy.itemsIndexed
 import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Surface
+import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.navigation.compose.rememberNavController
 import com.example.team5app.navigation.RootNavigationGraph
 import com.example.team5app.ui.theme.Team5AppTheme
+
 import kotlinx.coroutines.*
 import kotlin.system.measureTimeMillis
 
 class MainActivity : ComponentActivity() {
+
+
     @RequiresApi(Build.VERSION_CODES.N)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -29,6 +36,7 @@ class MainActivity : ComponentActivity() {
                     color = MaterialTheme.colors.background
                 ) {
                     RootNavigationGraph(navController = rememberNavController())
+
                 }
             }
         }
@@ -53,3 +61,4 @@ suspend fun networkCall2(): String{
     delay(3000L)
     return "Network Call 2"
 }
+

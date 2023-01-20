@@ -10,5 +10,13 @@
     \nPriya
     \nYoga
     </string>
-    <string name="lab_objective"> Handle concurrency with Threads, AsyncTask and Handlers. Access and Process data over network</string>
+    <string name="lab5_objective"> Handle concurrency with Threads, AsyncTask and Handlers. Access and Process data over network.</string>
+    <string name="async_explanation"> We have implemented Async property in our MainActivity onCreate function to handle multiple tasks concurrently.
+        To view this implementation please open and run this project in Android Studio and look at the Logcat console.</string>
+    <string name="document"> To know more about this implementation, please check out our documentation.</string>
+    <string name="network_explanation"> To fetch the data from a network API and display in our app we have used Retrofit library to make a http request
+        to the network API and stored the responses in a Kotlin data class. And then we have used the collected data in a Composable functions
+    to create the UI.</string>
+    <string name="network_note"> Due to the complexity of the App, we have moved this implementation to a separate Project and provided the respective apk file</string>
+    <string name="prog_lang"> We have used KOTLIN to write our logics and Jetpack Compose to create the UI</string>
 </resources>

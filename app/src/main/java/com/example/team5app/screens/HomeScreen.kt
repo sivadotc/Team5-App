@@ -18,7 +18,9 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
 import com.example.team5app.R
@@ -26,6 +28,7 @@ import com.example.team5app.navigation.DetailsScreen
 import com.example.team5app.navigation.MainScreen
 import com.example.team5app.ui.theme.Accent
 import com.example.team5app.ui.theme.Dark
+import com.example.team5app.ui.theme.LightBg
 import com.example.team5app.ui.theme.Typography
 
 @RequiresApi(Build.VERSION_CODES.N)
@@ -42,6 +45,21 @@ fun HomeScreen(navController: NavController) {
             contentDescription = null,
             contentScale = ContentScale.Fit
         )
+        Spacer(modifier = Modifier.height(5.dp))
+        Card(
+            shape = RoundedCornerShape(20.dp),
+            modifier = Modifier
+                .fillMaxWidth(),
+            elevation = 5.dp
+        ) {
+            Column(modifier = Modifier
+                .fillMaxWidth()
+                .background(LightBg)
+                .padding(15.dp)) {
+                Text(text = "Language Used", style = Typography.body1, fontWeight = FontWeight.Bold, color = Accent)
+                Text(text = stringResource(id = R.string.prog_lang), style = Typography.body1, color = Dark, textAlign = TextAlign.Justify)
+            }
+        }
         Spacer(modifier = Modifier.height(15.dp))
         Card(
             shape = RoundedCornerShape(20.dp),

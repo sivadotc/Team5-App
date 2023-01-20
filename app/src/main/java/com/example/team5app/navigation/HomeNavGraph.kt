@@ -23,7 +23,7 @@ fun HomeNavGraph(navController: NavHostController) {
             HomeScreen(navController = navController)
         }
         composable(route = BottomBarScreen.Profile.route) {
-            AllLabScreen()
+            AllLabScreen(navController = navController)
         }
         composable(route = BottomBarScreen.Settings.route) {
             ProfileScreen()
